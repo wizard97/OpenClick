@@ -1,0 +1,397 @@
+EESchema Schematic File Version 2
+LIBS:openclick-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rfm69hw
+LIBS:espressif-xess
+LIBS:ft230x
+LIBS:mb85rs64v
+LIBS:lcdssd1306
+LIBS:ap2152sgdict
+LIBS:sn74lvc1t45dbvr
+LIBS:xc6227c331pr-g
+LIBS:mc78lc33ntrg
+LIBS:openclick-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FT230X U5
+U 1 1 5B4ED1F6
+P 4950 3950
+F 0 "U5" H 4350 5100 79  0000 C CNN
+F 1 "FT230X" H 4950 4200 79  0000 C CNN
+F 2 "Housings_SSOP:SSOP-16_3.9x4.9mm_Pitch0.635mm" H 4750 3750 79  0001 C CNN
+F 3 "" H 4750 3750 79  0001 C CNN
+	1    4950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C12
+U 1 1 5B4ED1FD
+P 6150 3550
+F 0 "C12" H 6175 3650 50  0000 L CNN
+F 1 "0.1uF" H 6175 3450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6188 3400 50  0001 C CNN
+F 3 "" H 6150 3550 50  0001 C CNN
+	1    6150 3550
+	0    1    1    0   
+$EndComp
+Text Label 6200 3250 2    60   ~ 0
+TX_OUT
+Text Label 6200 3400 2    60   ~ 0
+RX_IN
+Text Label 3450 3250 0    60   ~ 0
+UART_3V3
+Text Label 4050 4150 2    60   ~ 0
+UART_3V3
+$Comp
+L GND #PWR018
+U 1 1 5B4ED209
+P 4950 4800
+F 0 "#PWR018" H 4950 4550 50  0001 C CNN
+F 1 "GND" H 4950 4650 50  0000 C CNN
+F 2 "" H 4950 4800 50  0001 C CNN
+F 3 "" H 4950 4800 50  0001 C CNN
+	1    4950 4800
+	1    0    0    -1  
+$EndComp
+Text Label 4400 2250 0    60   ~ 0
+USB_5V
+NoConn ~ 5900 3850
+NoConn ~ 5900 4000
+NoConn ~ 5900 4150
+NoConn ~ 5900 4300
+NoConn ~ 5900 3700
+Wire Wire Line
+	5900 3550 6000 3550
+Wire Wire Line
+	4800 4800 4950 4800
+Wire Wire Line
+	5100 2700 5550 2700
+Wire Wire Line
+	5900 3250 6200 3250
+Wire Wire Line
+	5900 3400 6200 3400
+Wire Wire Line
+	6300 3550 6350 3550
+Text Label 3700 3550 0    60   ~ 0
+USB_D-
+Text Label 3700 3700 0    60   ~ 0
+USB_D+
+Wire Wire Line
+	4050 3550 3700 3550
+Wire Wire Line
+	4050 3700 3700 3700
+Wire Wire Line
+	4050 3250 3450 3250
+Text Label 5550 2700 2    60   ~ 0
+UART_3V3
+Text HLabel 10100 2750 2    118  Input ~ 0
+VCC
+Text HLabel 8350 4550 0    118  Output ~ 0
+TX
+$Comp
+L USB_OTG J2
+U 1 1 5B4ED6CC
+P 1750 3600
+F 0 "J2" H 1550 4050 50  0000 L CNN
+F 1 "USB_OTG" H 1550 3950 50  0000 L CNN
+F 2 "Connectors:USB_Micro-B" H 1900 3550 50  0001 C CNN
+F 3 "" H 1900 3550 50  0001 C CNN
+	1    1750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 5B4ED6D3
+P 1650 4300
+F 0 "#PWR019" H 1650 4050 50  0001 C CNN
+F 1 "GND" H 1650 4150 50  0000 C CNN
+F 2 "" H 1650 4300 50  0001 C CNN
+F 3 "" H 1650 4300 50  0001 C CNN
+	1    1650 4300
+	1    0    0    -1  
+$EndComp
+Text Label 2450 3400 2    60   ~ 0
+USB_5V
+NoConn ~ 2050 3800
+Text Label 2450 3600 2    60   ~ 0
+USB_D+
+Text Label 2450 3700 2    60   ~ 0
+USB_D-
+$Comp
+L C C8
+U 1 1 5B4ED6DD
+P 1400 4150
+F 0 "C8" H 1250 4250 50  0000 L CNN
+F 1 "4.7nF" H 1150 4050 50  0000 L CNN
+F 2 "" H 1438 4000 50  0001 C CNN
+F 3 "" H 1400 4150 50  0001 C CNN
+	1    1400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5B4ED6E4
+P 1650 4150
+F 0 "R8" V 1550 4150 50  0000 C CNN
+F 1 "1M" V 1650 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1580 4150 50  0001 C CNN
+F 3 "" H 1650 4150 50  0001 C CNN
+	1    1650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4300 1750 4300
+Wire Wire Line
+	1400 4000 1650 4000
+Wire Wire Line
+	1750 4300 1750 4000
+Connection ~ 1650 4300
+Wire Wire Line
+	2050 3600 2450 3600
+Wire Wire Line
+	2050 3700 2450 3700
+Wire Wire Line
+	2050 3400 2450 3400
+$Comp
+L SN74LVC1T45DBVR U6
+U 1 1 5B4EEADB
+P 8950 3500
+F 0 "U6" H 8700 4400 60  0000 C CNN
+F 1 "SN74LVC1T45DBVR" H 8650 3700 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 8950 3500 60  0001 C CNN
+F 3 "" H 8950 3500 60  0001 C CNN
+	1    8950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 5B4EEB6E
+P 9450 3050
+F 0 "#PWR020" H 9450 2800 50  0001 C CNN
+F 1 "GND" H 9450 2900 50  0000 C CNN
+F 2 "" H 9450 3050 50  0001 C CNN
+F 3 "" H 9450 3050 50  0001 C CNN
+	1    9450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 2750 10100 2750
+Text HLabel 9250 3350 2    118  Input ~ 0
+RX
+$Comp
+L GND #PWR021
+U 1 1 5B4EEC24
+P 7750 2950
+F 0 "#PWR021" H 7750 2700 50  0001 C CNN
+F 1 "GND" H 7750 2800 50  0000 C CNN
+F 2 "" H 7750 2950 50  0001 C CNN
+F 3 "" H 7750 2950 50  0001 C CNN
+	1    7750 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2950 8200 2950
+$Comp
+L C C13
+U 1 1 5B4EECAC
+P 9450 2900
+F 0 "C13" H 9500 3000 50  0000 L CNN
+F 1 "0.1uF" H 9475 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9488 2750 50  0001 C CNN
+F 3 "" H 9450 2900 50  0001 C CNN
+	1    9450 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 9450 2750
+Wire Wire Line
+	9150 2950 9250 2950
+Wire Wire Line
+	9250 2950 9250 3050
+Wire Wire Line
+	9250 3050 9450 3050
+Connection ~ 9450 3050
+Wire Wire Line
+	9150 3350 9150 3150
+Wire Wire Line
+	9250 3350 9150 3350
+Text Label 7750 2750 0    60   ~ 0
+UART_3V3
+Wire Wire Line
+	8200 2750 7750 2750
+Text Label 7900 3150 0    60   ~ 0
+RX_IN
+Wire Wire Line
+	8200 3150 7900 3150
+$Comp
+L SN74LVC1T45DBVR U7
+U 1 1 5B4EF736
+P 9500 4750
+F 0 "U7" H 9250 5650 60  0000 C CNN
+F 1 "SN74LVC1T45DBVR" H 9200 4950 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 9500 4750 60  0001 C CNN
+F 3 "" H 9500 4750 60  0001 C CNN
+	1    9500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 5B4EF73C
+P 9800 4200
+F 0 "#PWR022" H 9800 3950 50  0001 C CNN
+F 1 "GND" H 9800 4050 50  0000 C CNN
+F 2 "" H 9800 4200 50  0001 C CNN
+F 3 "" H 9800 4200 50  0001 C CNN
+	1    9800 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 4200 9800 4200
+Wire Wire Line
+	9700 4600 9700 4400
+Text Label 8300 4000 0    60   ~ 0
+UART_3V3
+Wire Wire Line
+	8750 4000 8300 4000
+Wire Wire Line
+	9700 4000 9700 2750
+Wire Wire Line
+	8750 4400 8550 4400
+Connection ~ 9700 2750
+Text Label 10050 4600 2    60   ~ 0
+TX_OUT
+Wire Wire Line
+	10050 4600 9700 4600
+$Comp
+L GND #PWR023
+U 1 1 5B4EFE6A
+P 8500 4200
+F 0 "#PWR023" H 8500 3950 50  0001 C CNN
+F 1 "GND" H 8500 4050 50  0000 C CNN
+F 2 "" H 8500 4200 50  0001 C CNN
+F 3 "" H 8500 4200 50  0001 C CNN
+	1    8500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4200 8500 4200
+Wire Wire Line
+	8550 4400 8550 4550
+Wire Wire Line
+	8550 4550 8350 4550
+Text HLabel 6350 3550 2    118  Output ~ 0
+RESET
+$Comp
+L C C9
+U 1 1 5B4F0739
+P 3450 3400
+F 0 "C9" H 3500 3500 50  0000 L CNN
+F 1 "0.1uF" H 3475 3300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3488 3250 50  0001 C CNN
+F 3 "" H 3450 3400 50  0001 C CNN
+	1    3450 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR024
+U 1 1 5B4F088C
+P 3450 3550
+F 0 "#PWR024" H 3450 3300 50  0001 C CNN
+F 1 "GND" H 3450 3400 50  0000 C CNN
+F 2 "" H 3450 3550 50  0001 C CNN
+F 3 "" H 3450 3550 50  0001 C CNN
+	1    3450 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2250 4900 2700
+$Comp
+L GND #PWR025
+U 1 1 5B4F0BC2
+P 4400 2550
+F 0 "#PWR025" H 4400 2300 50  0001 C CNN
+F 1 "GND" H 4400 2400 50  0000 C CNN
+F 2 "" H 4400 2550 50  0001 C CNN
+F 3 "" H 4400 2550 50  0001 C CNN
+	1    4400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2250 4900 2250
+$Comp
+L CP1 C11
+U 1 1 5B4F10CA
+P 4650 2400
+F 0 "C11" H 4675 2500 50  0000 L CNN
+F 1 "10uF" H 4675 2300 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 4650 2400 50  0001 C CNN
+F 3 "" H 4650 2400 50  0001 C CNN
+	1    4650 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4650 2250
+Wire Wire Line
+	4650 2550 4400 2550
+Text Notes 8300 5250 0    157  ~ 0
+Level Shifting
+Text Notes 4050 5300 0    157  ~ 0
+Serial to USB
+Text Notes 1200 5300 0    157  ~ 0
+USB Conn
+Text Notes 7200 6950 0    197  ~ 39
+USB Serial
+$Comp
+L C C10
+U 1 1 5B51EBA5
+P 4400 2400
+F 0 "C10" H 4250 2500 50  0000 L CNN
+F 1 "0.1uF" H 4200 2300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4438 2250 50  0001 C CNN
+F 3 "" H 4400 2400 50  0001 C CNN
+	1    4400 2400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
